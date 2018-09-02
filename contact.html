@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="responsive project with media queries">
+    <meta name="author" content="Justyna Warda">
+    <title>Farmers' Market</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+<!-- MENU AND LOGO-->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html" id="logo"> <h1> <img src="./img/logo.png" alt=""> <span class="highlight">Farmer's</span> Market</h1></a>
+        </div>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <nav id="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="shop-online.html">Shop online</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+            <li class="current"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+<!--SECTION CONTACT-->
+    <section id="contact-area">
+      <div class="container">
+
+        <div class="contact-area-form">
+          <h1>Contact us</h1>
+
+          <div class="form">
+            <h3>If you have any questions, do not hesitate to contact us:</h3>
+
+            <form>
+      				<div>
+      					<label>Name:</label><br>
+      					<input type="text" placeholder=" Jan Kowalski">
+      				</div>
+
+      				<div>
+      					<label>Email:</label><br>
+      					<input type="email" placeholder=" jan.kowalski@gmail.com">
+      				</div>
+
+      				<div>
+      					<label>Message:</label><br>
+      					<textarea placeholder=" Your questions/remarks..."></textarea>
+      				</div>
+      				<button class="form-button" type="submit">Send</button>
+    				</form>
+
+          </div>
+        </div>
+          
+        <div class="contact-area-address">
+          <h2>Visit us</h2>
+          <div class="contact-area-address-text">
+            <p><span>Owocowa Street 5 <br>Lublin </span></p>
+            <p> <span> If you want to be our supplier:</span> <br> Contact number: +48 123 456 789 <br>E-mail: farmersmarket@gmail.com </p>
+            <p> <span>Find us on Facebook:</span> <br>https//www.facebook.com/farmersmarket </p>
+          </div>
+
+          <div id="contact-area-address-map"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Responsive website &copy; 2018 </p>
+    </footer>
+
+
+    <!-- GOOGLE MAPS API -->
+      <script type="text/javascript">
+        function initMap() {
+          var location = { lat: 51.267464, lng: 22.584965};
+          var map = new google.maps.Map(document.getElementById("contact-area-address-map"),{
+            zoom: 4,
+            center: location
+          });
+          var marker = new google.maps.Marker({
+            position: location,
+            map: map
+          });
+        }
+      </script>
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNr2bVGHFkfElYVf8mit8wEV2-9PXDWhw&callback=initMap">
+      </script>
+
+      <script type="text/javascript" src="js.js"></script>
+
+
+  </body>
+
+</html>
